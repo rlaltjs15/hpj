@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .box1::before {
+                content: '주문폭주';
+                background-color: blueviolet;
+                color: blue;
+            }
+            .box2::after {
+                content: '품절';
+                background-color: red;
+                color: white;
+            }
+            .box3::after {
+                content: '??';
+                background-color: green;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <h1>제품목록</h1>
+            <ul>
+                <li class="box1">제품 A</li>
+                <li>제품 B</li>
+                <li>제품 C</li>
+                <li class="box2">제품 D</li>
+                <li>제품 E</li>
+                <li class="box1">제품 F</li>
+                <li class="box3">제품 G</li>
+                <li class="box3">제품 H</li>
+            </ul>
+        </div>
+    </body>
+</html>

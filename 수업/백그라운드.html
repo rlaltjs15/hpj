@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            section {
+                background-image: url(images/과일.jpg);
+                width: 400px;
+                height: 400px;
+                border: 1px solid black;
+                background-repeat: no-repeat;
+
+                /* background-repeat: no-repeat x; 가로이미지 반복 */
+                /* background-repeat: no-repeat y; 세로이미지 반복 */
+                background-size: contain;
+
+                /* background-size: contain; 비율유지 영역안에 가득채우기 */
+                /* background-size: cover; 배경이미지가 잘리더라도 채움 */
+
+                background-position: 100% 50%;
+                /* backgroun-position : right bottom : 오른쪽 아래로 */
+                /* backgroun-position : 20px 60px : 위치로 */
+                /* backgroun-position : 100% 50% : 오른쪽 끝 위에서 중앙 */
+            }
+        </style>
+    </head>
+    <body>
+        <section></section>
+    </body>
+</html>
