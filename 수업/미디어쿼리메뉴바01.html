@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://kit.fontawesome.com/4ec79785b5.js" crossorigin="anonymous"></script>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            nav{
+                display: flex;
+                justify-content: space-around;
+                height: 70px;
+                background-color: silver;
+                padding-top: 15px;
+            }
+            .logo{
+                cursor: pointer;
+            }
+            ul{
+                list-style: none;
+                display: flex;
+            }
+            li{
+                padding: 0 15px;
+            }
+            a{
+                text-decoration: none;
+                color: black;
+            }
+            .logologo{
+                color: black;
+            }
+            @media screen and (max-width:768px){
+            nav{
+                height: 170px;
+            }
+            .navbar ul{
+                flex-direction: column;
+            }
+            .navbar ul li{
+                line-height: 2;
+            }
+            .appo{
+                display: none;
+            }
+        }
+        .fa-barcode{
+            font-size: 150px;
+        }
+        </style>
+        
+        
+    </head>
+    <body>
+        <nav>
+            <div class="logo"></div>
+                <a href="index.html" class="loglog">
+                    <h1>Logo</h1></a>
+                </div>
+            <div class="navbar">
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">page</a></li>
+                    <li><a href="#">blog</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </div>
+            <div class="icons">
+                <ul>
+                    <li><a href="#">아이콘</a></li>
+                    <li><a href="#" class="appo">아이콘</a></li>
+                    <li class="appo">appointment</li>
+                </ul>
+            </div>
+        </nav>
+        
+            <i class="fa-solid fa-barcode"></i>
+        
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 150px;
+        }
+        .origin{
+            perspective: 200px;/*원근감:3차원적용*/
+            border: 1px solid;
+            width: 220px;
+            height: 200px;
+            margin: 50px;
+        }
+        .rotatex{
+            transform: rotateX(45deg);
+        }
+        .rotatey{
+            transform: rotatey(45deg);
+        }
+        .rotatez{
+            transform: rotatez(45deg);
+        }
+        .rotatexyz{
+            transform: rotate3d(2.5, 1.2, 1.5, 45deg); /*x, y, z, 벡터*/
+        }
+        /* 기준으로 시계방향 회전 */
+    </style>
+</head>
+<body>
+    <h2>이미지 3차원 회전하기</h2>
+        <div class="origin">
+            <div class="rotatex">
+                <img src="https://cdn.pixabay.com/photo/2023/09/20/20/17/wall-8265556_1280.jpg" alt="" />
+            </div>
+        <div class="origin">
+                <div class="rotatey">
+                <img src="https://cdn.pixabay.com/photo/2023/09/20/20/17/wall-8265556_1280.jpg" alt="" />
+        </div>
+        <div class="origin">
+        <div class="rotatez">
+                <img src="https://cdn.pixabay.com/photo/2023/09/20/20/17/wall-8265556_1280.jpg" alt="" />
+        </div>
+        <div class="origin">
+        <div class="rotatexyz">
+                <img src="https://cdn.pixabay.com/photo/2023/09/20/20/17/wall-8265556_1280.jpg" alt="" />
+        </div>
+</body>
+</html>

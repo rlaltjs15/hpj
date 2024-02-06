@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap') * {
+            }
+            h1{
+                text-align: center;
+                margin-top: 130px;
+                font-family: 'Nanum Myeongjo', serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+         
+            
+            .membership{
+                border: 1px solid silver;
+                margin: 0;
+                padding: 30px;
+                overflow: hidden;
+                height: 100hv;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 500px;
+                border-radius: 10px;
+            }
+            p{
+                margin-left: 20px;
+                color: silver;
+            }
+            .box{
+                line-height: 30px;
+            }
+            .button input{
+                border: none;
+                width: 100%;
+                height: 50px;
+                margin-top: 30px;
+                cursor: pointer;
+            }
+            .button input:hover{
+                background-color: black;
+                color: white;
+            }
+            footer {
+                margin: 15px;
+                clear: both;
+                text-align: left;
+                padding: 5px;
+                margin-top: 600px;
+            }
+            .announce {
+                display: flex;
+            }
+            .ann {
+                display: flex;
+                padding: 15px;
+                align-items: center;
+            }
+            .ann a {
+                width: 300px;
+                color: gray;
+                margin-left: 20px;
+            }
+            .cl {
+                text-align: center;
+            }
+
+            .f_nav {
+                text-align: center;
+                font-size: small;
+                color: black;
+            }
+            .f_nav1:hover {
+                text-decoration: underline;
+            }
+            .cl p{
+                color: black;
+                line-height: 20px;
+                font-size: small;
+                display: inline;
+                margin: 2px;
+
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1><a href="음원사이트1.html">Music</a></h1>
+        <div class="membership">
+            <h3>서비스 약관에 동의해 주세요.</h3>
+            <div class="all">
+                <label><input type="checkbox"/>모두 동의합니다.</label>
+                <p>전체 동의는 필수 및 선택정보에 대한 동의도 포함되어 있으며,<br>
+                개별적으로도 동의를 선택하실 수 있습니다. <br>
+                선택항목에 대한 동의를 거부하시는 경우에도 서비스는 이용이 가능합니다.</div></p>
+                <div class="box">
+                    <label for="check1"><input type="checkbox" id="check1" value="v_1">만 14세 이상입니다.</label><br>
+                    <label for="check2"><input type="checkbox" id="check2" value="v_2">[필수] 계정 약관</label><br>
+                    <label for="check3"><input type="checkbox" id="check3" value="v_3">[필수] 통합 서비스 약관</label><br>
+                    <label for="check4"><input type="checkbox" id="check4" value="v_4">[필수] 개인정보 수집 및 이용 동의</label><br>
+                    <label for="check5"><input type="checkbox" id="check5" value="v_5">[선택] 알림 채널 추가 및 광고 메시지 수신</label><br>
+                    <label for="check6"><input type="checkbox" id="check6" value="v_6">[선택] 위치정보 수집 및 이용 동의</label><br>
+                    <label for="check7"><input type="checkbox" id="check7" value="v_7">[선택] 프로필정보 추가 수집 동의</label>
+                </div>
+                <div class="button">
+                    <a href="#"><input type="submit" value="동의"></a>
+                </div>
+            </div>
+        </div>
+        <footer>
+        <div class="cl">
+            <p>(주)Music</p>
+            <p>서울 관악구 남부순환로 1820 에그옐로우 14층(봉천동)</p>
+            <p>대표 : 3조</p>
+            <p>사업자등록번호 : 아쉽게도 없습니당</p><br>
+            <p>통신판매업신고번호 : 아쉽게도 없습니당</p>
+            <p>문의전화 : 사절</p>
+            <p>이메일 : 사절</p>
+            <p>(주)아이티인제개발원</p>
+        </div>
+    </footer>
+    </body>
+</html>

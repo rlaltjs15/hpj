@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap') * {
+            }
+            h1 {
+                text-align: center;
+                margin-top: 200px;
+                font-family: 'Nanum Myeongjo', serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+            .music {
+                border: 1px solid silver;
+                margin: 0;
+                padding: 30px;
+                overflow: hidden;
+                height: 100hv;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 500px;
+                border-radius: 10px;
+            }
+
+            footer {
+                margin: 15px;
+                clear: both;
+                text-align: left;
+                padding: 5px;
+                margin-top: 600px;
+            }
+            .announce {
+                display: flex;
+            }
+            .ann {
+                display: flex;
+                padding: 15px;
+                align-items: center;
+            }
+            .ann a {
+                width: 300px;
+                color: gray;
+                margin-left: 20px;
+            }
+            .cl {
+                text-align: center;
+            }
+
+            .f_nav {
+                text-align: center;
+                font-size: small;
+                color: black;
+            }
+            .f_nav1:hover {
+                text-decoration: underline;
+            }
+            .cl p {
+                color: black;
+                line-height: 20px;
+                font-size: small;
+                display: inline;
+                margin: 2px;
+            }
+            input[type='tel'] {
+                border: none;
+            }
+            .in {
+                border-bottom: 1px solid black;
+            }
+            .dycjd {
+                float: right;
+            }
+            .dycjd input {
+                border: none;
+                background-color: white;
+            }
+            .next input {
+                border: 1px solid silver;
+                width: 100%;
+                margin-top: 10px;
+                background-color: white;
+                color: silver;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Music</h1>
+
+        <div class="music">
+            <h2>가입을 위해 휴대폰 인증을 진행해 주세요.</h2>
+            <div class="in">
+                <input type="tel" value="전화번호 입력" />
+                <div class="dycjd">
+                    <input type="submit" value="인증요청" />
+                </div>
+            </div>
+            <div class="next">
+                <a href="#"><input type="submit" value="다음" /></a>
+            </div>
+        </div>
+        <footer>
+            <div class="cl">
+                <p>(주)Music</p>
+                <p>서울 관악구 남부순환로 1820 에그옐로우 14층(봉천동)</p>
+                <p>대표 : 3조</p>
+                <p>사업자등록번호 : 아쉽게도 없습니당</p>
+                <br />
+                <p>통신판매업신고번호 : 아쉽게도 없습니당</p>
+                <p>문의전화 : 사절</p>
+                <p>이메일 : 사절</p>
+                <p>(주)아이티인제개발원</p>
+            </div>
+        </footer>
+    </body>
+</html>

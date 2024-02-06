@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .origin {
+                border: 1px solid;
+                width: 200px;
+                margin: 50px;
+            }
+            .scalex:hover {
+                transform: scaleX(1.5);
+            }
+            .scaley:hover {
+                transform: scaleY(1.2);
+            }
+            .scale:hover{
+                transform: scale(0.7);
+            }
+        </style>
+    </head>
+    <body>
+        <h2>이미지 확대, 축소하기</h2>
+        <div class="origin">
+            <div class="scalex">
+                <img src="https://cdn.pixabay.com/photo/2023/06/22/16/34/man-8081871_1280.jpg" height="300px" />
+            </div>
+        </div>
+        <div class="origin">
+            <div class="scaley">
+                <img src="https://cdn.pixabay.com/photo/2023/06/22/16/34/man-8081871_1280.jpg" height="300px" />
+            </div>
+        </div>
+        <div class="origin">
+            <div class="scale">
+                <img src="https://cdn.pixabay.com/photo/2023/06/22/16/34/man-8081871_1280.jpg" height="300px" />
+            </div>
+        </div>
+    </body>
+</html>

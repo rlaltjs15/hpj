@@ -3,9 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>project practice</title>
+        <title>Music</title>
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap') * {
+            @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+            * {
                 margin: 0;
                 padding: 0;
             }
@@ -17,7 +18,7 @@
             .whole {
                 /* border: 1px solid grey; */
                 width: 1100px;
-                height: 2000px;
+                height: 1500px;
                 margin: 20px;
             }
             header,
@@ -89,6 +90,69 @@
                 font-style: normal;
             }
 
+            .main_title {
+                /* 메인 제목들 */
+                text-align: left;
+                margin-bottom: 10px;
+            }
+
+            .cover_all {
+                /* 앨범커버+텍스트 전체 */
+                height: 450px;
+                width: 660px;
+                /* border: 1px solid blue; */
+            }
+            .cover01,
+            .cover02,
+            .cover03,
+            .cover04,
+            .cover05,
+            .cover06 {
+                /* 앨범커버 전체 */
+                width: 180px;
+                height: 200px;
+                /* border: 1px solid red; */
+            }
+            .cover123 {
+                /* 앨범커버 상단 3개 */
+                /* border: 1px solid blue;*/
+                display: flex;
+                flex-wrap: row wrap;
+                justify-content: space-between;
+            }
+            .cover456 {
+                /* 앨범커버 하단 3개 */
+                /* border: 1px solid brown; */
+                display: flex;
+                flex-wrap: row wrap;
+                justify-content: space-between;
+                margin-top: 40px;
+            }
+
+            .cover_img {
+                /* 앨범커버들 사이즈 */
+                width: 180px;
+                height: 180px;
+                /* border: 1px solid violet; */
+            }
+
+            .cover_img:hover {
+                /* 앨범커버에 커서 올리면 어두워지는 이펙트 */
+                cursor: pointer;
+                filter: brightness(0.5);
+            }
+
+            .movies {
+                /* 뮤비 전체 */
+                display: flex;
+            }
+            .movie01,
+            .movie02 {
+                /* 뮤비 배열*/
+                flex-direction: row;
+                margin: 10px;
+            }
+
             /* 로그인 */
 
             .login {
@@ -127,28 +191,65 @@
             aside {
                 float: right;
                 width: 300px;
-                height: 280px;
-                margin: 0px 15px;
+                height: 300px;
+                margin: 0px 0px 0px 15px;
+                text-align: left;
             }
             .s_1 {
                 font-size: small;
 
                 font-weight: bold;
             }
+            aside li {
+                margin: 5px;
+            }
+            aside i {
+                width: 20px;
+            }
 
             /* 차트 */
-            .chart {
-                float: right;
-                width: 300px;
-                height: 560px;
-                line-height: 30px;
-                text-align: left;
+
+            h1 {
+                text-align: center;
+                font-family: 'Nanum Myeongjo', serif;
+                font-weight: 400;
+                font-style: normal;
+                padding-right: 60px;
             }
-            .chartHead {
+            .number {
                 text-align: center;
             }
-            .chart a:hover {
-                background-color: aliceblue;
+            .chart_box {
+                padding-left: 15px;
+                padding-top: 20px;
+                border: 1px solid gray;
+                height: 505px;
+                width: 285px;
+                margin-left: 15px;
+            }
+            .chart_box1 {
+                display: flex;
+                padding-left: 20px;
+            }
+            .chart_box1 label {
+                padding-left: 10px;
+            }
+            .music {
+                font-weight: bold;
+                font-size: large;
+            }
+            .name {
+                font-size: small;
+                color: silver;
+            }
+            .music_box {
+                margin-left: 10px;
+            }
+
+            /* 🔴로그인, 사이드바, 차트 통합 */
+            .log_chart {
+                display: flex;
+                flex-direction: column;
             }
 
             /* 리모컨 */
@@ -174,6 +275,7 @@
 
             /* 푸터 */
             footer {
+                width: 1010px;
                 border-top: 1px solid gray;
                 margin: 15px;
                 clear: both;
@@ -211,6 +313,7 @@
                 text-decoration: underline;
             }
         </style>
+        <script src="https://kit.fontawesome.com/4ec79785b5.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
@@ -219,7 +322,7 @@
                 <!-- 헤더 -->
                 <header>
                     <div class="headerH1">
-                        <h1>Music</h1>
+                        <a href="index.html"><h1>Music</h1></a>
                     </div>
                     <div id="search_div">
                         <div class="search_box">
@@ -234,25 +337,95 @@
                     <nav>
                         <a href="#" class="nav-menu">chart</a>
                         <a href="#" class="nav-menu">music award</a>
-                        <a href="#" class="nav-menu">magazine</a>
-                        <a href="#" class="nav-menu">event</a>
+                        <a href="magazine_list.html" class="nav-menu">magazine</a>
+                        <a href="event.html" class="nav-menu">event</a>
                     </nav>
                 </div>
 
                 <!-- 메인 -->
                 <main>
-                    <audio src=""></audio>
+                    <!-- now playing 파트 / 오디오 다운로드받은 파일이라 바꿔야할수도 있습니다-->
+                    <h3 class="main_title">🎵 Now Playing</h3>
+                    <audio src="once-in-paris-168895.mp3" controls loop auto muted="muted" type="audio/wav"></audio>
+                    <!-- 인기 앨범 파트-->
+                    <h3 class="main_title">🎧 인기 앨범</h3>
+                    <div class="cover_all">
+                        <div class="cover123">
+                            <div class="cover01">
+                                <a href="https://www.melon.com/album/detail.htm?albumId=11348980" target="_blank">
+                                    <img
+                                        class="cover_img"
+                                        src="https://cdnimg.melon.co.kr/cm2/album/images/113/48/980/11348980_20231020173557_500.jpg/melon/resize/260/quality/80/optimize"
+                                        width="30%"
+                                        style="display: block"
+                                    />
+                                </a>
+                                <p>세븐틴 (SEVENTEEN) - 음악의 신</p>
+                            </div>
+                            <div class="cover02">
+                                <a href="https://www.melon.com/album/detail.htm?albumId=10922231" target="_blank">
+                                    <img
+                                        class="cover_img"
+                                        src="https://cdnimg.melon.co.kr/cm2/album/images/109/22/231/10922231_20220527120653_500.jpg?d4668bd274949f814ae2ccadee6f42eb/melon/resize/260/quality/80/optimize"
+                                        width="30%"
+                                        style="display: block"
+                                    />
+                                </a>
+                                <p>세븐틴 (SEVENTEEN) - HOT</p>
+                            </div>
+                            <div class="cover03">
+                                <a href="https://www.melon.com/album/detail.htm?albumId=2320582" target="_blank">
+                                    <img
+                                        class="cover_img"
+                                        src="https://cdnimg.melon.co.kr/cm/album/images/023/20/582/2320582_500.jpg/melon/resize/260/quality/80/optimize"
+                                        width="30%"
+                                        style="display: block"
+                                    />
+                                </a>
+                                <p>세븐틴 (SEVENTEEN) - 아낀다</p>
+                            </div>
+                        </div>
+                        <div class="cover456">
+                            <div class="cover04">
+                                <a href="https://www.melon.com/album/detail.htm?albumId=2695228" target="_blank">
+                                    <img
+                                        class="cover_img"
+                                        src="https://cdnimg.melon.co.kr/cm/album/images/026/95/228/2695228_500.jpg/melon/resize/260/quality/80/optimize"
+                                        width="30%"
+                                        style="display: block"
+                                    />
+                                </a>
+                                <p>세븐틴 (SEVENTEEN) - 아주 NICE</p>
+                            </div>
+                            <div class="cover05">
+                                <a href="https://www.melon.com/album/detail.htm?albumId=11229537" target="_blank">
+                                    <img
+                                        class="cover_img"
+                                        src="https://cdnimg.melon.co.kr/cm2/album/images/112/29/537/11229537_20230421170444_500.jpg/melon/resize/260/quality/80/optimize"
+                                        width="30%"
+                                        style="display: block"
+                                    />
+                                </a>
+                                <p>세븐틴 (SEVENTEEN) - 손오공</p>
+                            </div>
+                            <div class="cover06">
+                                <a href="https://www.melon.com/album/detail.htm?albumId=2680682" target="_blank">
+                                    <img
+                                        class="cover_img"
+                                        src="https://cdnimg.melon.co.kr/cm/album/images/026/80/682/2680682_500.jpg?cde46cb9eb41b1cb1320c66b74e4f912/melon/resize/260/quality/80/optimize"
+                                        width="30%"
+                                        style="display: block"
+                                    />
+                                </a>
+                                <p>세븐틴 (SEVENTEEN) - 예쁘다</p>
+                            </div>
+                        </div>
+                    </div>
 
-                    <h3 class="main_title">🎧인기 앨범</h3>
-                    <img src="/images/pjt01/1_11th_mini_음악의신.jpg" width="30%" />
-                    <img src="/images/pjt01/2_4th_hot.jpg" width="30%" />
-                    <img src="/images/pjt01/3_1st_mini_아낀다.jpg" width="30%" />
-                    <img src="/images/pjt01/4_2nd_mini_만세.jpg" width="30%" />
-                    <img src="/images/pjt01/5_repack_아주nice.jpg" width="30%" />
-                    <img src="/images/pjt01/6_10th_mini_손오공.jpg" width="30%" />
                     <br />
                     <br />
-                    <h3 class="main_title">🎬뮤직비디오</h3>
+                    <!-- 뮤직비디오 파트 -->
+                    <h3 class="main_title">🎬 뮤직비디오</h3>
                     <section class="movies">
                         <div class="movie01">
                             <p>세븐틴(SEVENTEEN) - 음악의 신</p>
@@ -283,34 +456,187 @@
 
                 <!-- 로그인 -->
 
-                <div class="login">
-                    <div class="membership">
-                        <a href="#">membership</a>
+                <div class="log_chart">
+                    <!--로그인, 사이드바, 차트 통합-->
+                    <div class="login">
+                        <div class="membership">
+                            <a href="요금제(이현학).html">membership</a>
+                        </div>
+                        <a href="login.html"> <input type="submit" value="Login" /></a>
                     </div>
-                    <a href="http://127.0.0.1:5500/%EC%A1%B0%EB%B3%84%EA%B3%BC%EC%A0%9C/login.html"
-                        ><input type="submit" value="Login"
-                    /></a>
+
+                    <!-- 사이드바 -->
+                    <aside>
+                        <ul>
+                            <span class="s_1">사이드바</span>
+                            <hr />
+                            <div class="s_2">
+                                <li>
+                                    <a href="#"><i class="fa-solid fa-music"></i>최신 앨범</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa-solid fa-play"></i>장르 음악</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa-solid fa-fire"></i>뮤직 비디오</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fa-solid fa-volume-high"></i>연도별</a>
+                                </li>
+                            </div>
+                        </ul>
+                        <ul>
+                            <span class="s_1">마이뮤직</span>
+                            <hr />
+                            <li><a href="#">좋아하는 음악</a></li>
+                            <li><a href="#">최근에 들은 곡</a></li>
+                            <li><a href="#">Recap</a></li>
+                            <li><a href="#">playlists</a></li>
+                        </ul>
+                    </aside>
+
+                    <!-- 차트 -->
+
+                    <h1 class="chart_title">chart</h1>
+                    <div class="chart_box">
+                        <div class="chart_box1">
+                            <div class="img">
+                                <img
+                                    src="https://cdnimg.melon.co.kr/cm2/album/images/114/04/142/11404142_20240123172248_500.jpg?6c9dde4b44f3625b764f4c9d454a6ad5/melon/resize/282/quality/80/optimize"
+                                    alt=""
+                                    width="50px"
+                                />
+                            </div>
+                            <div class="music_box">
+                                <label class="music"><a href="#">Love wins all</a></label
+                                ><br />
+                                <label class="name"><a href="#">아이유</a></label>
+                            </div>
+                        </div>
+
+                        <div class="chart_box1">
+                            <div class="img">
+                                <img
+                                    src="https://cdnimg.melon.co.kr/cm2/album/images/113/72/896/11372896_20231127104957_500.jpg?9ecd4c6c7ed241174aa1a5c27c4ba3c6/melon/resize/282/quality/80/optimize"
+                                    alt=""
+                                    width="50px"
+                                />
+                            </div>
+                            <div class="music_box">
+                                <label class="music"><a href="#">To. X</a></label
+                                ><br />
+                                <label class="name"><a href="#">태연</a></label>
+                            </div>
+                        </div>
+
+                        <div class="chart_box1">
+                            <div class="img">
+                                <img
+                                    src="https://cdnimg.melon.co.kr/cm2/album/images/113/76/816/11376816_20231201120653_500.jpg?54e243dd4f188d67c0742fa334acb512/melon/resize/282/quality/80/optimize"
+                                    alt=""
+                                    width="50px"
+                                />
+                            </div>
+                            <div class="music_box">
+                                <label class="music"><a href="#">비의 랩소디</a></label
+                                ><br />
+                                <label class="name"><a href="#">임재현</a></label>
+                            </div>
+                        </div>
+
+                        <div class="chart_box1">
+                            <div class="img">
+                                <img
+                                    src="https://cdnimg.melon.co.kr/cm2/album/images/113/94/065/11394065_20240104151541_500.jpg?04606c8703e5996ebf5ba36dcb1213e1/melon/resize/282/quality/80/optimize"
+                                    alt=""
+                                    width="50px"
+                                />
+                            </div>
+                            <div class="music_box">
+                                <label class="music"><a href="#">Love 119</a></label
+                                ><br />
+                                <label class="name"><a href="#">Riize</a></label>
+                            </div>
+                        </div>
+
+                        <div class="chart_box1">
+                            <div class="img">
+                                <img
+                                    src="https://cdnimg.melon.co.kr/cm2/album/images/113/52/904/11352904_20231027101104_500.jpg/melon/quality/80/resize/48/optimize"
+                                    alt=""
+                                    width="50px"
+                                />
+                            </div>
+                            <div class="music_box">
+                                <label class="music"><a href="#">Perfect Night</a></label
+                                ><br />
+                                <label class="name"><a href="#">르세라핌</a></label>
+                            </div>
+                        </div>
+
+                        <div class="chart_box1">
+                            <div class="img">
+                                <img
+                                    src="https://cdnimg.melon.co.kr/cm2/album/images/113/82/987/11382987_20231212165916_500.jpg/melon/quality/80/resize/48/optimize"
+                                    alt=""
+                                    width="50px"
+                                />
+                            </div>
+                            <div class="music_box">
+                                <label class="music"><a href="#">에피소드</a></label
+                                ><br />
+                                <label class="name"><a href="#">이무진</a></label>
+                            </div>
+                        </div>
+
+                        <div class="chart_box1">
+                            <div class="img">
+                                <img
+                                    src="https://cdnimg.melon.co.kr/cm2/album/images/113/62/544/11362544_20231110142622_500.jpg/melon/quality/80/resize/48/optimize"
+                                    alt=""
+                                    width="50px"
+                                />
+                            </div>
+                            <div class="music_box">
+                                <label class="music"><a href="#">Drama</a></label
+                                ><br />
+                                <label class="name"><a href="#">aespa</a></label>
+                            </div>
+                        </div>
+
+                        <div class="chart_box1">
+                            <div class="img">
+                                <img
+                                    src="https://cdnimg.melon.co.kr/cm2/album/images/113/05/759/11305759_20230814111006_500.jpg/melon/quality/80/resize/48/optimize"
+                                    alt=""
+                                    width="50px"
+                                />
+                            </div>
+                            <div class="music_box">
+                                <label class="music"><a href="#">그대만 있다면..</a></label
+                                ><br />
+                                <label class="name"><a href="#">너드커넥션</a></label>
+                            </div>
+                        </div>
+
+                        <div class="chart_box1">
+                            <div class="img">
+                                <img
+                                    src="https://cdnimg.melon.co.kr/cm2/album/images/112/27/533/11227533_20230419162238_500.jpg?f2aaefe2470b9694d40b0ad16df118a6/melon/resize/282/quality/80/optimize"
+                                    alt=""
+                                    width="50px"
+                                />
+                            </div>
+                            <div class="music_box">
+                                <label class="music"><a href="#">헤어지자 말해요</a></label
+                                ><br />
+                                <label class="name"><a href="#">박재정</a></label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- 사이드바 -->
-                <aside>
-                    <ul>
-                        <span class="s_1">사이드바</span>
-                        <hr />
-                        <li><a href="#">최신 앨범</a></li>
-                        <li><a href="#">장르 음악</a></li>
-                        <li><a href="#">뮤직 비디오</a></li>
-                        <li><a href="#">연도별</a></li>
-                    </ul>
-                    <ul>
-                        <span class="s_1">마이뮤직</span>
-                        <hr />
-                        <li><a href="#">좋아하는 음악</a></li>
-                        <li><a href="#">최근에 들은 곡</a></li>
-                        <li><a href="#">Recap</a></li>
-                        <li><a href="#">playlists</a></li>
-                    </ul>
-                </aside>
+                <!-- 🔴 리모컨 코드를 밑으로 내리고 차트 코드를 올렸습니다 / 로그인, 사이드바, 차트 묶으려고 -->
 
                 <!-- 리모컨 -->
                 <div class="remote">
@@ -318,23 +644,6 @@
                         <li><a href="#">맨 위로</a></li>
                         <li><a href="#gotobottom">맨 아래로</a></li>
                     </ul>
-                </div>
-
-                <!-- 차트 -->
-                <div class="chart">
-                    <div class="chartHead">차트</div>
-                    <ol>
-                        <li><a href="">아이유 - Love wins all</a></li>
-                        <li><a href="">태연 - To. X</a></li>
-                        <li><a href="">임재현 - 비의 랩소디</a></li>
-                        <li><a href="">LE SSERAFIM - Perfect Night</a></li>
-                        <li><a href="">RIIZE - Love 119</a></li>
-                        <li><a href="">이무진 - 에피소드</a></li>
-                        <li><a href="">aespa - Drama</a></li>
-                        <li><a href="">너드커넥션 - 그대만 있다면</a></li>
-                        <li><a href="">박재정 - 헤어지자 말해요</a></li>
-                        <li><a href="">범진 - 인사</a></li>
-                    </ol>
                 </div>
 
                 <!-- 푸터 -->

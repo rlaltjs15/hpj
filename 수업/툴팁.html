@@ -9,10 +9,11 @@
                 cursor: pointer;
             }
             .tooltip-content {
+                /* display: none; */
                 visibility: hidden;
                 background-color: brown;
             }
-            .tooltip:hover .tooltip-content {
+            .tooltip.active .tooltip-content {
                 visibility: visible;
             }
         </style>
@@ -24,12 +25,18 @@
             원래 요소가 있는 공간은 그대로 차지하지만,<br />
             display:non; 은 아예 공간조차 차지하지 않습니다.
         </p>
-
-        <div class="tooltip">
+        <div class="tooltip" onclick="toggletooltip()">
             <span>여기에 마우스를 올려보세요!</span>
             <div class="tooltip-content">
                 <p>마우스를 올리면 나타나는 부분</p>
             </div>
         </div>
+
+        <script>
+            function toggletooltip() {
+                let tooltip = document.querySelector('.tooltip');
+                tooltip.classList.toggle('active');
+            }
+        </script>
     </body>
 </html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            #wrap {
+                width: 1000px;
+                margin: 0 auto;
+            }
+            ul {
+                width: 4000px;
+                height: 350px;
+                overflow: hidden; /*삐져나온 부분 안 보이게*/
+                list-style: none;
+                position: relative;
+                animation: slideani 8s infinite ease-in-out;
+            }
+            li {
+                width: 1000px;
+                height: 350px;
+                float: left;
+            }
+            @keyframes slideani{
+                0%{left: 0;}
+                25%{left: -1000px;}
+                50%{left: -2000px;}
+                75%{left: -3000px;}
+                100%{left: 0;}
+            }
+        </style>
+        <style>
+            li:nth-child(1) {
+                background: url(https://cdn.pixabay.com/photo/2023/11/07/12/33/owl-8372237_1280.jpg);
+                background-size: cover;
+            }
+            li:nth-child(2) {
+                background: url(https://cdn.pixabay.com/photo/2024/01/18/10/50/cormorant-8516719_1280.jpg);
+                background-size: cover;
+            }
+            li:nth-child(3) {
+                background: url(https://cdn.pixabay.com/photo/2023/07/28/20/36/flower-8155951_1280.jpg);
+                background-size: cover;
+            }
+            li:nth-child(4) {
+                background: url(https://cdn.pixabay.com/photo/2024/01/10/16/21/laptop-8499942_1280.jpg);
+                background-size: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </body>
+</html>
