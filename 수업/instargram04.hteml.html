@@ -1,0 +1,117 @@
+<html>
+  <head></head>
+  <body>
+    <style>
+      h2{
+        color: rebeccapurple;
+      }
+      .highlight{
+        border: solid;
+      }
+        #profile{
+          border: solid blue;
+        }
+      .thumbnail_grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .thumbnail{
+        width: 100%;
+      }
+      #stat_bar{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        border-top: 1px solid gray;
+        border-bottom: 1px solid gray;
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      /* 프로필 사진 */
+      .circle_pic{
+        border: solid white 1px;
+        border-radius: 50%;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        /* fill 미디어를 부모 요소에 꽉 들어 맞게 채움. 찌그러짐
+        contain 미디어 비율을 유지한 채, 부모 요소 밖으로 튀어 나가지 않도록 크기 축소
+        cover 미디어 일부 부모 요소 밖으로 삐져나가더라도 비율 유지 꽉 들어 맞게 */
+      }
+      #profile_pic{
+        width: 50px;
+        height: 50px;
+      }
+      #highlight_pic{
+        width: 35px;
+        height: 35px;
+      }
+    </style>
+    <div>
+    <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg" alt=""height="50px">
+    <div id="profile">
+    <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg" alt="프로필사진" height="50px">
+  </div>
+    <h2>half_bottle<br /></h2>
+
+    <p>프로필편집<br /></p>
+    <p>
+    </div>
+      <strong>김희선 (Heesun Kim)</strong><br />
+      사람<br />
+    </p>
+    <p>needleworm.github.io<br /></p>
+    
+
+      <div>
+        <div class="highlight">
+        하이라이트 이미지 삽입 <br>
+        <div><img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg" class="circle_pic" id="highlight_pic"></div>
+        <div>😎</div>
+      </div>
+      
+      <div class="highlight">
+        <div><img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg" class="circle_pic" id="highlight_pic"></div>
+        <div>😊</div>
+      </div>
+      </div>
+
+     
+    <div id="stat_bar" >
+        <div class="stat">
+      게시물<br />
+    </div>
+      <div class="stat">
+      팔로워<br />
+      189
+    </div>
+    <div class="stat">
+        팔로워<br />
+        189
+      </div>
+  </div>
+
+  <div>아이콘이 들어갈 자리</div>
+  <div>
+    게시물 섬네일이 들어갈 자리<br>
+    <div class=" thumbanil_grid">
+    <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg" class="thumbnail">
+    <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg" class="thumbnail">
+    <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg" class="thumbnail">
+</div>
+<div class="thumbanil_grid">
+    <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg" class="thumbnail">
+    <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg" class="thumbnail">
+    <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg" class="thumbnail">
+</div>
+<div class="thumbanil_grid">
+    <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg" class="thumbnail">
+    <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg" class="thumbnail">
+     <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg" class="thumbnail">
+    </div>
+  </div>
+  </body>
+</html>
+<!-- 150 153 156 206 -->
+<!-- 217 -->

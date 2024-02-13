@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .wrapper {
+                width: 1000px;
+                height: 800px;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 100px);
+                grid-template-areas:
+                    'box1 box1 box2'
+                    'box3 box4 box2'
+                    'box5 box4 box6'
+                    'box5 box7 box7';
+            }
+
+            .box1 {
+                background-image: url(https://cdn.pixabay.com/photo/2023/05/15/14/02/cat-7995160_1280.jpg);
+                grid-area: box1;
+                margin: 10px;
+                background-size: cover;
+            }
+            .box2 {
+                background-image: url(https://cdn.pixabay.com/photo/2023/05/15/14/02/cat-7995160_1280.jpg);
+                grid-area: box2;
+                margin: 10px;
+                background-size: cover;
+            }
+            .box3 {
+                background-image: url(https://cdn.pixabay.com/photo/2023/05/15/14/02/cat-7995160_1280.jpg);
+                grid-area: box3;
+                margin: 10px;
+                background-size: cover;
+            }
+            .box4 {
+                background-image: url(https://cdn.pixabay.com/photo/2023/05/15/14/02/cat-7995160_1280.jpg);
+                grid-area: box4;
+                margin: 10px;
+                background-size: cover;
+            }
+            .box5 {
+                background-image: url(https://cdn.pixabay.com/photo/2023/05/15/14/02/cat-7995160_1280.jpg);
+                grid-area: box5;
+                margin: 10px;
+                background-size: cover;
+            }
+            .box6 {
+                background-image: url(https://cdn.pixabay.com/photo/2023/05/15/14/02/cat-7995160_1280.jpg);
+                grid-area: box6;
+                margin: 10px;
+                background-size: cover;
+            }
+            .box7 {
+                background-image: url(https://cdn.pixabay.com/photo/2023/05/15/14/02/cat-7995160_1280.jpg);
+                grid-area: box7;
+                margin: 10px;
+                background-size: cover;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="box box1">box1</div>
+            <div class="box box2">box2</div>
+            <div class="box box3">box3</div>
+            <div class="box box4">box4</div>
+            <div class="box box5">box5</div>
+            <div class="box box6">box6</div>
+            <div class="box box7">box7</div>
+        </div>
+    </body>
+</html>

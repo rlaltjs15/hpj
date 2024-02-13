@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="=device-, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            /* div{
+                width: 150px;
+                height: 150px;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+                border: solid white 1px;
+                border-radius: 50%;
+            } */
+            h2{
+                color: red;
+            }
+            .highlight{
+                border: solid;
+            }
+            #profile{
+                border: solid;
+                /* border-color: blue; */
+            }
+            .thumbnail_grid{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            .thumbnail{
+                width: 100%;
+            }
+            #stat_bar{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+
+                border-top: 1px solid gray;
+                border-bottom: 1px solid gray;
+
+                margin-bottom: 5px;
+                margin-top: 5px;
+            }
+            .stat{
+                 text-align: center;
+            }
+            .circle_pic{
+                border: solid white 1px;
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg" width="50px" />
+        </div>
+        <div id="profile">
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg" width="50px" />
+            <input type="search" value="검색" />
+        </div>
+        <div>
+            <h2>half_bottle</h2>
+            <button>프로필 편집</button>
+        </div>
+    </div>
+        <div>
+            <strong>김희선</strong> <br />
+            저자
+        </div>
+        <div class="highlight">
+        <div>
+            <p><a href="http://naver.com">needleworm.github.io </a><br /></p>
+        </div>
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg" height="35px" />
+        </div>
+        <div>😎</div>
+    </div>
+    <div class="highlight">
+        <div>
+            <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg" height="35px" />
+        </div>
+        <div>😎</div>
+        <div>
+        </div>
+            <div id="stat_bar">
+                <div class="stat">
+                게시물<br />
+                133
+            </div>
+            
+
+            <div class="stat">
+                팔로워<br />
+                408
+            </div>
+            <div class="stat">
+                팔로우<br />
+                189
+            </div>
+        </div>
+                
+            
+        </div>
+        <div>아이콘이 들어갈 자리</div>
+        <div>
+            <div class="thumbnail_grid">
+            <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg" class="thumbnail">
+            <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg" class="thumbnail">
+            <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg" class="thumbnail">
+        </div>
+        <div class="thumbnail_grid">
+            <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg"class="thumbnail">
+            <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg"class="thumbnail">
+            <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg"class="thumbnail">
+        </div>
+        <div class="thumbnail_grid">
+            <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg"class="thumbnail">
+            <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg"class="thumbnail">
+            <img src="https://cdn.pixabay.com/photo/2014/02/27/16/10/flowers-276014_1280.jpg"class="thumbnail">
+        </div>
+        </div>
+        <div>게시물 썸네일이 들어갈 자리</div>
+    </body>
+</html>
