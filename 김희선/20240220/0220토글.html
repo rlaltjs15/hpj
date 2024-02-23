@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #all-box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #box{
+            width: 300px;
+            height: 200px;
+            border: 1px solid silver;
+            margin-top: 300px;
+        }
+        .offon{
+            background-color: black;
+            color: white;
+        }
+        .offon button{
+            color: white;
+            background-color: black;
+            border: none;
+        }
+        #onoff{
+            cursor: pointer;
+        }
+        button{
+            border: none;
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="all-box">
+    <div id="box"> <button id="onoff">껏다 말았다</button> </div>
+    </div>
+
+    <script>
+        var body = document.body;
+        var box = document.getElementById("box");
+        var toggleonoff = document.getElementById("onoff");
+
+        onoff.onclick = function(){
+            body.classList.toggle("offon")
+            box.innerText = bady.classList.contains("offon")
+        }
+
+       
+    </script>
+    
+</body>
+</html>

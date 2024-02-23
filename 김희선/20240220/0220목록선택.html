@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+        li{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1> 클릭해 보거라 </h1>
+        <p>오늘의 일정🤔</p>
+        <ul id="list">
+            <li class="check">일단 일어나</li>
+            <li class="check">밥도 먹어</li>
+            <li class="check">수영도 해</li>
+            <li class="check">학원도 가</li>
+            <li class="check">이제 자빠져 자</li>
+            
+        </ul>
+    </div>
+
+    
+    <script>
+        let list = document.querySelectorAll(".check")
+
+        for(let i=0; i<list.length; i++){
+            list[i].addEventListener("click", function(){
+                this.style.color="red"
+                this.style.backgroundColor="pink"
+                this.style.fontSize="20px"
+
+            })
+        }
+    </script>
+</body>
+</html>

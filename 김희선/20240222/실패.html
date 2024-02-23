@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>총 가격주문</title>
+    <style>
+    *{
+     margin: 0 auto;   
+     text-align: center;
+    }
+    .get{
+        width: 30px;
+    }
+   
+    ul{
+        list-style:none;
+        display: flex;
+    }
+    .menu{
+        display: flex;
+    }
+
+    </style>
+</head>
+<body>
+    <form>
+        <h1>엽기떡볶이</h1>
+        <fieldset>
+            <legend> 기본가격</legend>
+            <ul>
+                <li>
+                    
+                    <img src="/240222/이미지/istockphoto-1152570620-612x612.jpg" width="100px" height="80px"><br>
+                    <div class="menu">
+                    <input type="checkbox" class="checkbx1" value="8000"><p> 8,000원</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="/240222/이미지/람녀.jpg" width="100px" height="80px">
+                    <div class="menu">
+                    <input type="checkbox" class="checkbx1" value="3000"><p> 3,000원</p>
+                    </div>
+                </li>
+                <li>
+                    <label>
+                    <img src="/240222/이미지/1673601819410_0.jpg" width="100px" height="80px">
+                    <div class="menu">
+                        <input type="checkbox" class="checkbx1" value="6000"><p> 6,000원</p>
+                    </div>
+                    </label>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset>
+            <legend>추가 주문</legend>
+            <!-- 체크박스 value에 각각의 가격을 입력해준다. -->
+            <!-- 모든 체크 박스 클래스 이름 같게 .checkbx -->
+            <label ><input type="checkbox" class="checkbx" value="2000">떡 추가(2000원)<input type="number" class="get"></label>
+            <label ><input type="checkbox" class="checkbx" value="1000">치즈 추가(1000원)<input type="number" class="get"></label>
+            <label ><input type="checkbox" class="checkbx" value="1200">오뎅 추가(1200원)<input type="number" class="get"></label>
+            <label ><input type="checkbox" class="checkbx" value="1000">만두 추가(1000원)<input type="number" class="get"></label>
+            <label ><input type="checkbox" class="checkbx" value="800">김말이 추가(800원)<input type="number" class="get"></label>
+            <label ><input type="checkbox" class="checkbx" value="1200">면 추가(1200원)</label>
+            <label ><input type="checkbox" class="checkbx" value="800">소세지 추가(800원)<input type="number" class="get"></label>
+            <label ><input type="checkbox" class="checkbx" value="800">계란 추가(800원)<input type="number" class="get"></label>
+        </fieldset>
+        <!-- 결과 합계가격을 나타낼 곳 -->
+        <fieldset>
+            <legend>합계</legend>
+            <input type="text" id="total" name="total" class="price" readonly>
+        </fieldset>
+    </form>
+
+    <script>
+        let price = 0;
+        let main = document.querySelectorAll(".checkbx1");
+        // 모든 체크박서(같은 이름의 클래스)를 변수로 가져오기
+        let sideMenu = document.querySelectorAll(".checkbx")
+        // total 합계 가격 부분 변수로 가져오기
+        let total = document.querySelector("#total")
+
+        let sideGet = document.querySelectorAll(".get")
+
+        total.value = price + "원";
+
+        for(i= 0; i < main.length; i++){
+            main[i].onclick =function(){
+                if(this.checked == true){
+                    price += parseInt(this.value)
+                }else{
+                   price -= parseInt(this.value)
+                }
+                total.value = price + "원";
+            }
+        }
+        
+        for (let i = 0; i < sideMenu.length; i++) {
+        sideMenu[i].onclick = function () {
+            if (this.checked == true) {
+                if(sideGet.onchange==true){
+                    price +=(this*sideGet.value)
+                }
+                price += parseInt(this.value);
+            } else{
+                price -= parseInt(this.value);
+            }
+            total.value = price + "원";
+        }
+    }
+    
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+.box {
+    display: flex;
+}
+
+section {
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
+.first {
+    color: blue;
+}
+
+.h5name {
+    color: silver;
+}
+
+.mainproductInfo{
+    display: flex;
+    font-weight: bold;
+}
+.maininfo{
+    margin-left: 30px;
+}
+#Plus{
+    cursor: pointer;
+}
+.imgbox{
+    display: flex;
+}
+.imgbox #inText{
+    margin-left: 5px;
+}
+
+.btn button{
+    width: 247px;
+    height: 50px;
+    border: 1px solid silver;
+    background-color: white;
+    cursor: pointer;
+}
+#small-pic img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+h1{
+    font-size: 25px;
+}
+h2{
+    display: none;
+}
+h2 button{
+    cursor: pointer;
+}
+.allbtn button{
+    margin-top: 20px;
+}
+.dmdpr{
+    border: 1px solid red;
+    background-color: white;
+    color: red;
+    cursor: pointer;
+}
+.dmdkr{
+    border: 1px solid silver;
+    background-color: white;
+    cursor: pointer;
+}

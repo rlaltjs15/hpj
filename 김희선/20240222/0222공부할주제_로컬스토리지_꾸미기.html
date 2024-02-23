@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공부할 주제_로컬 스토리지</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            margin-top: 50px;
+            text-align: center;
+        }
+        
+        p{
+            margin-bottom: 30px;
+        }
+        button{
+            cursor: pointer;
+            border: none;
+            background-color: white;
+            margin-left: 20px;
+        }
+        button:hover{
+            font-size: large;
+            font-weight: bold;
+        }
+        input{
+            width: 300px;
+            border: none;
+            border-bottom: 1px solid silver;
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    
+    <div id="container">
+
+        <h1>공부할 주제</h1>
+        <p>공부할 내용을 기록해 보세요.</p>
+        <form>
+            <input type="text" id="item" autofocus="true">
+            <button type="button" id="add" class="addBtn">추가하기 싫당</button>
+        </form>
+
+        <!-- 표시할 영역 -->
+        <div id="itemList"></div>
+    </div>
+
+
+    <script>
+        let itemList = [];
+        let addBtn = document.querySelector("#add");
+        addBtn.addEventListener("click", addList);
+        function addList() {
+            let item = document.querySelector("#item").value;
+            console.log(item);
+            if(item != null){
+                // itemList.push(item);
+                itemList.unshift(item);
+                document.querySelector("#item").value = "";
+                document.querySelector("#item").focus();
+            }
+            localStorage.setItem("storageList", JSON.stringify(itemList));
+            showList();
+            }
+            function showList(){
+            let list = "<ul>";
+            for(let i=0; i<itemList.length; i++){
+                list += "<li>" + itemList[i] + "<span class='close' id=" +i+ "> 돔황쳐 </span></li>";
+            }
+            list += "</ul>"
+            document.querySelector('#itemList').innerHTML = list;
+
+            let remove = document.querySelectorAll(".close");
+            for(let i=0; i<remove.length; i++){
+                remove[i].addEventListener("click", removeList);
+            }
+        }
+        function removeList(){
+            console.log(this);
+            let id = this.getAttribute("id");
+            itemList.splice(id, 1)
+            showList();
+            localStorage.setItem("storageList", JSON.stringify(itemList));
+        }
+
+        let inputField = document.querySelector("#item");
+        inputField.addEventListener("keypress", function(event){
+            if(event.key == "Enter"){
+                event.preventDefault();
+                addList();
+            }
+        })
+    </script>
+</body>
+
+</html>

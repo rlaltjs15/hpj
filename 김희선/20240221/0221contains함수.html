@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contains 함수</title>
+    <style>
+        #wrap{
+            width: 300px;
+            height: 300px;
+            border: 1px solid;
+            padding: 50px;
+            margin: 100px auto;
+        }
+        #wrap article{
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background-color: orange;
+        }
+        /* article class가 있을 경우 색을 바꾼다 */
+        /* article을 지우면 wrap자체가 바뀜 */
+        /* on class가 들어가면 script on 사용 */
+        #wrap.on article{
+            background-color: hotpink;
+        }
+        #wrap.on{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+   <section id="wrap">
+    <article> 클릭! </article>
+    <!-- 특정 클래스가 잇는지 확인하는 contains() 함수 -->
+    <!-- 클래스명 on 이 있는지 확인 후 없다면 만들고 있으면 없앨 때 -->
+
+
+
+
+    <script>
+        let $wrap = document.querySelector("#wrap");
+
+
+        // wrap -> addEvaentListener(효과) -> click했을 때
+
+        $wrap.addEventListener("click", () =>{
+            let isOn = $wrap.classList.contains("on");
+            console.log(isOn);
+            // if(isOn){
+            //     $wrap.classList.remove("on");
+            // }else{
+            //     $wrap.classList.add("on");
+            // }
+
+            // 삼항 연산자로 줄여서 쓸 수 있다.
+            // (isOn) ? $wrap.classList.remove("on") : $wrap.classList.add("on");
+
+            // toggle로 사용할 수 있다.
+            $wrap.classList.toggle("on");
+
+            // classList.contains()는 특정 클래스가 선택요소에 있으면 true,
+            // 없으면 false를 반환해주는 자바스크립트의 내장 기능이다.
+        }) 
+    </script>
+
+   </section> 
+</body>
+</html>

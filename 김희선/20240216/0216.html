@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      img {
+        width: 200px;
+      }
+      .img1 {
+        display: block;
+      }
+      .img2 {
+        display: none;
+      }
+      .img1.active {
+        display: none;
+      }
+      .img2.active {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>WHat Can JavaScript Do?</h1>
+    <p>이미지 직접 클릭</p>
+ 
+        <img src="img/free-icon-light-bulb-5725272.png" id="img1" />
+        <!-- <img src="img/free-icon-light-bulb-5724205.png" class="img2" /> -->
+     
+    <button id="on">Turn on the light</button>
+    <button id="off">Turn off the light</button>
+
+    <script>
+      const $img1 = document.getElementById("img1");
+
+      const $on = document.getElementById("on");
+      const $off = document.getElementById("off");
+
+
+      $on.addEventListener("click", () => {  
+        $img1.src = "img/free-icon-light-bulb-5724205.png"
+      });
+
+      $off.addEventListener("click", () => {
+        $img1.src = "img/free-icon-light-bulb-5725272.png"
+      });
+    </script>
+  </body>
+</html>

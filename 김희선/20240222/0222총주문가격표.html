@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        width: 700px;
+        text-align: center;
+      }
+      .number {
+        display: flex;
+        justify-content: center;
+      }
+      .box{
+        margin-left: 10px;
+      }
+      .number button {
+        width: 30px;
+        border: 1px solid silver;
+        background-color: white;
+        cursor: pointer;
+      }
+
+      fieldset img {
+        width: 300px;
+      }
+
+      .price {
+        text-align: center;
+        border: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <h1>총 주문 가격 확인</h1>
+      <fieldset>
+        <!-- 기본가격 -->
+        <legend>기본가격</legend>
+        <img
+          src="https://shopping-phinf.pstatic.net/main_1104422/11044226096.20170210172628.jpg?type=f640"
+        />
+        <p>10,960원</p>
+
+        <div class="number">
+          <div class="inText">0</div>
+          <div class="box">
+          <button id="Plus" class="plus">+</button>
+          <button id="minus" class="minus">-</button>
+        </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <!-- 체크박스 value에 각각의 가격 값을 입력한다. -->
+        <!-- 모든 체크박스 클래스 이름 같게 .checkbox -->
+        <legend>추가 주문</legend>
+        <label
+          ><input type="checkbox" class="checkbx" value="3000" />다크커버쳐
+          200g(3,000원)</label
+        >
+        <label
+          ><input type="checkbox" class="checkbx" value="1000" />코코아 파우더
+          20g(1,000원)</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            class="checkbx"
+            value="500"
+          />포크(500원)</label
+        ><br />
+        <label
+          ><input type="checkbox" class="checkbx" value="5000" />10구 패턴상자
+          4개(5,000원)</label
+        >
+        <label
+          ><input type="checkbox" class="checkbx" value="3000" />4개입 선물상자
+          (3,000원)</label
+        >
+        <label
+          ><input type="checkbox" class="checkbx" value="5000" />50구
+          파베트레이(5,000원)</label
+        >
+      </fieldset>
+
+      <!-- 결과 합계 가격을 나타낼 곳 -->
+      <fieldset>
+        <legend>총 가격</legend>
+        <input type="text" id="total" name="total" class="price" readonly />
+      </fieldset>
+    </form>
+
+    <script>
+      // price라는 변수에 30,000대입
+      let price = 10960;
+      
+      
+      
+
+      // 모든 체크박스(같은 이름의 클래스)를 변수로 가져오기 qSAll
+      let sideMenu = document.querySelectorAll(".checkbx");
+
+      // total 합계 가격 부분 변수로 가져오기.
+      total.value = price + "원";
+
+      // check 확인 = if문(this.checked ==(맞으면) true)
+      // if문 안 : 합계가격에 합산하기 +=
+      // 클릭 후 바로 실행
+      // parseInt : 정수로 변환
+      for (i = 0; i < sideMenu.length; i++) {
+        sideMenu[i].onclick = function () {
+          if (this.checked == true) {
+            price += parseInt(this.value);
+          } else {
+            price -= parseInt(this.value);
+          }
+          total.value = price + "원";
+          
+        };
+      }
+
+      
+
+      const $Plus = document.getElementById("Plus");
+
+      const $Minus = document.getElementById("Minus");
+
+      let $inText = document.querySelector(".inText");
+
+      let num = 0;
+
+      $Plus.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        num++;
+
+        console.log(num);
+
+        $inText.textContent = num;
+
+        
+      });
+
+      $Minus.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        num--;
+
+        console.log(num);
+
+        $inText.textContent = num;
+      });
+
+     
+
+
+
+
+
+
+
+ 
+    </script>
+  </body>
+</html>

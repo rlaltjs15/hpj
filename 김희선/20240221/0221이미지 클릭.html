@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #big{
+            width: 461px;
+            height: 300px;
+        }
+        .small{
+            width: 150px;
+            height: 120px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>제목부분에 해당하는</h1>
+        <div id="prod-pic">
+            <img src="https://cdn.pixabay.com/photo/2024/02/08/20/31/smoking-8561797_1280.jpg" id="big">
+            <div id="small-pic">
+                <img src="https://cdn.pixabay.com/photo/2023/09/28/16/27/door-8281982_1280.jpg" class="small">
+                <img src="https://cdn.pixabay.com/photo/2023/03/11/15/47/mongoose-7844724_1280.jpg" class="small">
+                <img src="https://cdn.pixabay.com/photo/2024/01/03/18/02/tree-8485930_1280.jpg" class="small">
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let big = document.querySelector("#big");
+        let smallPics = document.querySelectorAll(".small")
+
+        for(let i=0; i<smallPics.length; i++){
+            smallPics[i].addEventListener("click", changePic);
+        }
+
+        function changePic(){
+            // this예약어를 사용해서 클릭한 대상(small)의 속성값 가져오기
+            let newPic = this.src;
+            big.setAttribute("src", newPic);
+        }
+    </script>
+</body>
+</html>

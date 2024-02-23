@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+
+    <style>
+        .inText {
+
+            font-weight: bold;
+
+            font-size: 50px;
+
+        }
+
+        button {
+
+            width: 30px;
+
+            height: 30px;
+
+            border: none;
+
+            cursor: pointer;
+
+        }
+
+        a {
+
+            font-size: 30px;
+
+        }
+
+        #change1 {
+
+            background-color: red;
+
+        }
+
+        #change2 {
+
+            background-color: orange;
+
+        }
+
+        #change3 {
+
+            background-color: yellow;
+
+        }
+
+        #change4 {
+
+            background-color: green;
+
+        }
+
+        #change5 {
+
+            background-color: blue;
+
+        }
+
+        #change6 {
+
+            background-color: purple;
+
+        }
+
+        #change7 {
+
+            background-color: black;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="inText">0</div>
+
+    ​
+
+    <a href="#" id="btnPlus">plus</a>
+
+    <a href="#" id="btnMinus">minus</a> <br />
+
+    ​
+
+    <button id="change1"></button>
+
+    <button id="change2"></button>
+
+    <button id="change3"></button>
+
+    <button id="change4"></button>
+
+    <button id="change5"></button>
+
+    <button id="change6"></button>
+
+    <button id="change7"></button>
+
+    ​
+
+    <script>
+
+        const $btnPlus = document.getElementById('btnPlus');
+
+        const $btnMinus = document.getElementById('btnMinus');
+
+        let $inText = document.querySelector('.inText');
+
+        let num = 0;
+
+
+
+        $btnPlus.addEventListener('click', (e) => {
+
+            e.preventDefault();
+
+            num++;
+
+            console.log(num);
+
+            $inText.textContent = num;
+
+        });
+
+
+
+        $btnMinus.addEventListener('click', (e) => {
+
+            e.preventDefault();
+
+            num--;
+
+            console.log(num);
+
+            $inText.textContent = num;
+
+        });
+
+
+
+        document.querySelector('#change1').onclick = function () {
+
+            document.querySelector('.inText').style.color = 'red';
+
+        };
+
+        document.querySelector('#change2').onclick = function () {
+
+            document.querySelector('.inText').style.color = 'orange';
+
+        };
+
+        document.querySelector('#change3').onclick = function () {
+
+            document.querySelector('.inText').style.color = 'yellow';
+
+        };
+
+        document.querySelector('#change4').onclick = function () {
+
+            document.querySelector('.inText').style.color = 'green';
+
+        };
+
+        document.querySelector('#change5').onclick = function () {
+
+            document.querySelector('.inText').style.color = 'blue';
+
+        };
+
+        document.querySelector('#change6').onclick = function () {
+
+            document.querySelector('.inText').style.color = 'purple';
+
+        };
+
+        document.querySelector('#change7').onclick = function () {
+
+            document.querySelector('.inText').style.color = 'black';
+
+        };
+
+    </script>
+
+</body>
+
+</html>

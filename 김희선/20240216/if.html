@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 200px;
+            
+        }
+        #corver{
+            display: block;
+        }
+        #cover1{
+            display: none;
+        }
+        #cover.active{
+            display: none;
+        }
+        #cover1.active{
+            display: block;
+        }
+    
+    </style>
+</head>
+<body>
+    <img src="./img/free-icon-light-bulb-5725272.png" id="cover">
+    <img src="img/free-icon-light-bulb-5724205.png" id="cover1">
+
+    <button id="on">Turn on the light</button>
+    <!-- <button id="off">Turn off the light</button> -->
+
+    <script>
+        const $cover = document.querySelector("#cover")
+        const $cover1 = document.querySelector("#cover1")
+        const $on = document.querySelector("#on")
+
+        $on.addEventListener ("click", () => {
+            $cover.classList.toggle("active")
+            $cover1.classList.toggle("active")
+        })
+
+       
+
+        
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>WHat Can JavaScript Do?</h1>
+    <p>이미지 직접 클릭</p>
+    
+    <img src="./img/free-icon-light-bulb-5725272.png" id="cover">
+    <!-- <img src="img/free-icon-light-bulb-5724205.png" class="img2"> -->
+
+
+
+    <script>
+        let cover = document.getElementById("cover");
+        cover.addEventListener("dblclick", function(){
+            cover.src = "./img/free-icon-light-bulb-5724205.png";
+        });
+
+        cover.addEventListener("mouseover", function(){
+            cover.src = "./img/free-icon-light-bulb-5725272.png";
+        });
+    </script>
+
+
+         
+</body>
+</html>
